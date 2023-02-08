@@ -1,0 +1,28 @@
+# Example docker-compose.yml
+version: "3"
+
+services:
+  lunchbot:
+    build: .
+    ports:
+      - 8888:8888
+    expose:
+      - 8888
+    volumes:
+      - images:/images
+    # environment:
+      # Alternatively use .env file
+      # WEBHOOK_URL: webhook url from mattermost
+      # IMAGE_FOLDER: /images
+      # PUBLIC_URL: where your images will be served from
+      # OPENAI_KEY: supersecret
+      # RUN_SECRET: amazingsecret - prevent others from running lunchbot
+    env_file: .env
+    labels:
+      # This is for my setup to automatically route the HTTP requests using Traefik
+      - traefik.enable=true
+      - http.subdomain=menu
+      - traefik.http.routers.menu.entrypoints=websecure
+
+volumes:
+  images:
