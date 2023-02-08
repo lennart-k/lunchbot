@@ -28,4 +28,5 @@ async def make_app() -> web.Application:
     return app
 
 print("Lunchbot Server running on port 8888")
+print(f"Accepting requests under /run/{RUN_SECRET}")
 web.run_app(make_app(), port=8888)
