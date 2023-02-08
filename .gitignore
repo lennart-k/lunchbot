@@ -1,0 +1,29 @@
+# Build folders
+dist
+*.egg
+*.egg-info
+build
+
+# venv
+venv
+pythonenv3.8
+
+# IntelliJ, PyCharm
+.idea
+
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Cache folders
+__pycache__/
+.pytest_cache
+
+**/*.pyc
+
+images
+
+.env
