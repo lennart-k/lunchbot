@@ -1,14 +1,14 @@
 from aiohttp import web
 from . import run_message
-from .config import IMAGE_FOLDER
+from .config import IMAGE_FOLDER, RUN_SECRET
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
 routes = web.RouteTableDef()
 
-@routes.get("/run/amazingsecret")
-@routes.post("/run/amazingsecret")
+@routes.get(f"/run/{RUN_SECRET}")
+@routes.post(f"/run/{RUN_SECRET}")
 async def request_run(request: web.Request) -> web.Response:
     try:
         logging.info("/run requested")
