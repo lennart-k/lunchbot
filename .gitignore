@@ -27,3 +27,4 @@ __pycache__/
 images
 
 .env
+docker-compose.yml
