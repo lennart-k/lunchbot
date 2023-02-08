@@ -8,8 +8,14 @@ Also features previews of the menu by DALLE 2.
 
 ## Requirements
 
-mensa-utils from here: https://git.mafiasi.de/19kaemmle/mensa-utils
+My fork of mensa-utils from here: https://github.com/lennart-k/mensa-utils
 Install using
 ```
-pip install git+https://git.mafiasi.de/19kaemmle/mensa-utils
+pip install git+https://github.com/lennart-k/mensa-utils
+```
+
+## Docker setup
+
+```
+docker-compose up
 ```
